@@ -1,0 +1,70 @@
+#title{
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 0.1rem;
+}
+
+#allinputs{
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 0.1rem;
+  background-color: rgb(230, 222, 222);
+}
+
+.input{
+  height: 3rem;
+}
+
+#button{
+  height: 3.2rem;
+  width: 8rem;
+  background-color: rgb(97, 97, 245);
+  color: white;
+}
+.font{
+  font-size: 1.4rem;
+}
+
+#table{
+border-collapse: collapse;
+}
+
+tr:nth-child(even){
+    background-color: rgb(159, 159, 209);
+}
+
+td,th{
+  border: solid 0.1rem;
+  padding: 2px;
+
+}
+
+tr:hover{
+  background-color: rgb(214, 179, 179);
+}
+
+th:hover{
+  padding: 4px;
+}
+
+td:hover{
+  padding: 4px;
+}
+
+#but{
+  position: absolute;
+  right: 1%;
+  background-color: blueviolet;
+  color: white;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  top: 20px;
+}
