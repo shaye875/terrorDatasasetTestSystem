@@ -31,6 +31,7 @@
 
 #table{
 border-collapse: collapse;
+width: 100%;
 }
 
 tr:nth-child(even){
@@ -47,14 +48,6 @@ tr:hover{
   background-color: rgb(214, 179, 179);
 }
 
-th:hover{
-  padding: 4px;
-}
-
-td:hover{
-  padding: 4px;
-}
-
 #but{
   position: absolute;
   right: 1%;
@@ -67,4 +60,93 @@ td:hover{
   justify-content: center;
   text-decoration: none;
   top: 20px;
+}
+
+#qws{
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  align-items: center;
+  border-bottom: solid 0.1rem;
+  width: 80%;
+}
+
+#allq{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ans{
+  width: 80%;
+  margin-top: 3rem;
+  border-bottom: solid 0.1rem;
+  height: 13rem;
+}
+
+#an{
+  display: flex;
+  flex-direction: column;
+}
+
+#inq{
+  height: 3rem;
+  font-size: 2rem;
+}
+
+#sub{
+  height: 3.2rem;
+  width: 11rem;
+  background-color: rgb(97, 97, 245);
+  color: white;
+  margin-top: 3rem;
+  margin-left: 30vw;
+     font-size: 1rem;
+}
+
+.cur{
+  width: 77vw;
+  padding: 1rem;
+  background-color: #dcf0e1;
+  border: solid 0.1rem #ccdbd1;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  height: 1.3rem;
+}
+
+#curd{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 0.1rem;
+  height: 20rem;
+}
+
+.butt{
+    height: 3.2rem;
+  width: 11rem;
+  background-color: rgb(97, 97, 245);
+  color: white;
+     font-size: 1rem;
+}
+
+#lin{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+     text-decoration: none;
+   
+     
+}
+
+#nex{
+  margin-top: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+#wr{
+  background-color: rgb(241, 209, 209);
+    border: solid 0.1rem red;
 }
