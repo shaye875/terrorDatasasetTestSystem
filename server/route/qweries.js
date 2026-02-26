@@ -18,7 +18,8 @@ export async function insertScore(obj) {
     try {
         const data = await fsP.readFile("./data/scores.json","utf8")
         const arr = await JSON.parse(data)
-        arr.push(obj)
+        arr[0].score += obj.score
+        arr[0].date = new Date()
         await fsP.writeFile("./data/scores.json", JSON.stringify(arr))
     } catch (err) {
         throw new Error("error read score", err)
