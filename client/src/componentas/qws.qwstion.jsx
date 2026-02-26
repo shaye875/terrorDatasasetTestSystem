@@ -12,14 +12,14 @@ function Qwsqwstion() {
   const [value, setValue] = useState("")
   const [use, setUse] = useState(new Date())
   function change() {
-    localStorage.setItem("q", JSON.stringify(listTerrorists[Math.floor(Math.random() * 50)]))
+    localStorage.setItem("qs", JSON.stringify(listTerrorists[Math.floor(Math.random() * 50)]))
     setUse(new Date())
     setTimeout(() => {
       setResult(false)
     }, 1000)
 
   }
-  if ((listTerrorists.length > 0 && localStorage.getItem("q") === 'undefined') || (listTerrorists.length > 0 && localStorage.getItem("q") === undefined)) {
+  if ((listTerrorists.length > 0 && localStorage.getItem("qs") === 'undefined') || (listTerrorists.length > 0 && localStorage.getItem("qs") === undefined) || (listTerrorists.length > 0 && localStorage.getItem("qs") === null)) {
     change()
   }
   async function fetchScore() {
@@ -33,14 +33,14 @@ function Qwsqwstion() {
       })
     })
   }
-  console.log(localStorage.getItem("q"));
+  console.log(localStorage.getItem("qs"));
 
-
+  console.log(listTerrorists);
 
   return (
     <div id='allq'>
       <div id='qws'>
-        {localStorage.getItem("q") != 'undefined' && <p>When <b>Country = {JSON.parse(localStorage.getItem("q")).country_txt}</b> and <b>year = {JSON.parse(localStorage.getItem("q")).iyear},</b>what is the <b>Attack Type?</b></p>}
+        {localStorage.getItem("qs") != 'undefined' && localStorage.getItem("qs") != null && <p>When <b>Country = {JSON.parse(localStorage.getItem("qs")).country_txt}</b> and <b>year = {JSON.parse(localStorage.getItem("qs")).iyear},</b>what is the <b>Attack Type?</b></p>}
       </div>
       <div id='ans'>
         <div id='an'>
@@ -49,8 +49,8 @@ function Qwsqwstion() {
         </div>
         <button id='sub' onClick={(() => {
          
-           console.log(value,JSON.parse(localStorage.getItem("q")).attacktype1_txt)
-          if (value === JSON.parse(localStorage.getItem("q")).attacktype1_txt) {
+           console.log(value,JSON.parse(localStorage.getItem("qs")).attacktype1_txt)
+          if (value === JSON.parse(localStorage.getItem("qs")).attacktype1_txt) {
             setResult(true)
             setNex(true)
             fetchScore()
@@ -59,7 +59,7 @@ function Qwsqwstion() {
         })}>Submit Answer</button>
       </div>
       <div id='curd'>
-        {localStorage.getItem("q") != 'undefined' && result && <p className='cur'><b>Correct!</b> The answer is: <b>{JSON.parse(localStorage.getItem("q")).attacktype1_txt}</b></p>}
+        {localStorage.getItem("qs") != 'undefined' && localStorage.getItem("qs") != null && result && <p className='cur'><b>Correct!</b> The answer is: <b>{JSON.parse(localStorage.getItem("qs")).attacktype1_txt}</b></p>}
         {!result && <p id='wr' className='cur'>No matching result found. No point.</p>}
       </div>
       <div id='nex'>
